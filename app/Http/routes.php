@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/Notfound',function(){
+    
+    return view('errors.404');
+    
+});
+
+Route::group(['middleware' => ['\App\Http\Middleware\AdminMiddleware']], function () {
+
 Route::get('/user/items','ItemsController@index');
 Route::get('/user/items/add','ItemsController@create');
 Route::post('/user/items/add','ItemsController@store');
@@ -25,3 +33,4 @@ Route::post('/user/items/edit/{id}','ItemsController@update');
 
 Route::get('/user/items/detele/{id}','ItemsController@delete');
 
+});

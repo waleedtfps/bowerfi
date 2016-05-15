@@ -12,13 +12,8 @@
 */
 
 Route::get('/', function () {
+
    return redirect('login');
-});
-
-
-
-Route::get('index', function () {
-    return view('layouts.index');
 });
 
 
@@ -30,3 +25,17 @@ Route::get('register', function () {
     return view('user.register');
 });
 route::post('register','RegistrationController@create');
+
+   
+
+Route::get('/user/items','ItemsController@index');
+Route::get('/user/items/add','ItemsController@create');
+Route::post('/user/items/add','ItemsController@store');
+
+Route::get('/user/items/edit/{id}','ItemsController@edit');
+Route::post('/user/items/edit/{id}','ItemsController@update');
+
+
+Route::get('/user/items/detele/{id}','ItemsController@delete');
+
+

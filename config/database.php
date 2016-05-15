@@ -52,27 +52,19 @@ return [
             'prefix'   => '',
         ],
 
-     
-        
-         'mysql' => [
-            'driver' => 'mysql',
-            'host' => 'localhost',
-            'port' =>  '3306',
-            'database' =>  'bower',
-            'username' => 'root',
-            'password' => '',
-            'charset' => 'utf8',
+
+        'mysql' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST', '107.180.28.140'),
+            'database'  => env('DB_DATABASE', 'bowerfi'),
+            'username'  => env('DB_USERNAME', 'bowerfi_user'),
+            'password'  => env('DB_PASSWORD', 'bowerfi@045'),
+            'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-            'strict' => false,
-            'engine' => null,
+            'prefix'    => '',
+            'strict'    => false,
         ],
-        
-        
-        
-        
-        
-        
+
 
         'pgsql' => [
             'driver'   => 'pgsql',

@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/user/items','ItemsController@index');
+Route::get('/user/items/add','ItemsController@create');
+Route::post('/user/items/add','ItemsController@store');
+
+Route::get('/user/items/edit/{id}','ItemsController@edit');
+Route::post('/user/items/edit/{id}','ItemsController@update');
+
+
+Route::get('/user/items/detele/{id}','ItemsController@delete');
+

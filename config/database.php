@@ -54,10 +54,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'i2524918_lara1'),
-            'username'  => env('DB_USERNAME', 'i2524918_lara1'),
-            'password'  => env('DB_PASSWORD', 'B#Ez~EVvVptc1*a5D(&43^&5'),
+            'host'      => env('DB_HOST', '107.180.28.140'),
+            'database'  => env('DB_DATABASE', 'bowerfi'),
+            'username'  => env('DB_USERNAME', 'bowerfi_user'),
+            'password'  => env('DB_PASSWORD', 'bowerfi@045'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

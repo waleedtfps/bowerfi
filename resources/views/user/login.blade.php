@@ -30,13 +30,18 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Bower</b>Fi</a>
+    <a href="#"><b>Bower</b>Fi</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
-
-    <form action="../../index2.html" method="post">
+    @if(Session::has('message'))
+    <div class="alert-danger">
+        {{ Session::get('message') }}
+    </div>
+    @endif
+    <form action="{{URL::to('login')}}" method="post">
+         {!! csrf_field() !!}
       <div class="form-group has-feedback">
         <input type="email" class="form-control" placeholder="Email" name="email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

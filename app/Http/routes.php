@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('login', function () {
     return view('user.login');
 });
-
+Route::post('login','LoginController@authenticate');
 
 Route::get('register', function () {
     return view('user.register');
